@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+[
+     <!ENTITY lt "&#60;"> 
+]>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+
+<body>
+
+
+  <ui:composition>
+
+    <ui:define name="title">IPMR</ui:define>
+
+    <ui:define name="body">
+    
+    
+      <p:messages />
+      
+     <!--  Release Information :
+       Cookie for release 2.7.0 is : doNotShowRelease270Popup 
+       For each release the Information need to be updated and as well the cookie name
+     -->
+      
+     
+   <!--     <h:outputScript>
+ 		$(function() {
+ 			if(!getCookie('doNotShowRelease#{versionInfo.version}Popup')){
+ 				#{rich:component('infoPopup')}.show();
+ 			} else {
+ 				#{rich:component('infoPopup')}.hide();
+ 			} 
+ 			
+ 		})	;	
+	  function setCookie(cvalue) {
+	  	var cname = 'doNotShowRelease#{versionInfo.version}Popup';
+	  
+	    document.cookie = cname + "=" + cvalue + "; " + "expires=Thu, 18 Dec 2050 12:00:00 UTC";
+	}
+
+		function getCookie(cname) {
+		    var name = cname + "=";
+		    var ca = document.cookie.split(';');
+		    for(var i=0; i&#60;ca.length; i++) {
+		        var c = ca[i];
+		        while (c.charAt(0)==' ') c = c.substring(1);
+		        if (c.indexOf(name) == 0) return true;
+		    }
+		    return false;
+		}
+
+	</h:outputScript> -->
+   
+   <!--  <p:dialog widgetVar ="dbl1" modal="false" width="620" height="450" resizeable="false" show="false" >
+        <f:facet name="header">
+            <h:outputText value="Release info..." />
+        </f:facet>
+        <f:facet name="controls">
+            <h:outputLink value="#" onclick="#{p:component('dbl1')}.hide(); return false;">
+                X
+            </h:outputLink>
+        </f:facet>
+        <h:panelGrid columns="1">
+        
+        <p style="font-size:10pt;">Version #{versionInfo.version} of IPMR application has been released.</p> 
+		  <br/>
+		  <ul style="list-style-position: inside;">
+		    <li style="font-size:10pt;">Changes included in this release:
+		     <ul>
+		    	<li style="font-size:10pt;font-style: italic; margin-left: 30px; list-style-position: outside;">23 Changes included in this release</li>
+		    </ul>
+		    </li>
+		    <br/>  			   
+		    <h3 style="font-size:10pt;">Highlights in this release:</h3>
+		       <ul>
+			       <li style="font-size:10pt;">Integration with Kola tool to receive information about Object number.</li>
+			       <li style="font-size:10pt;">VBC Nova Bus factories and VBC factories acronyms tool tip added.</li>
+			       <li style="font-size:10pt;">“PCI Decision Made (Stop at PCI)” changed to “PCI Decision Made (PCI -> CG not applicable)”.</li>
+			       <li style="font-size:10pt;">Category field has been added in hand-over functionality.</li>
+			       <li style="font-size:10pt;">When making a search, when looking for an investigator or a pre-study leader, it is possible to search either through a drop-down list or a free text field.</li>
+			   </ul>
+			 </ul>  
+		<br/><br/>
+		
+		<h1 style="font-size:10pt;">You can find further details and instructions about the changes <a style="vertical-align: bottom; color:blue; text-decoration: underline; font-size:10pt;" href="http://teamplace.volvo.com/sites/GIB/Shared%20Documents/Change%20Management/Track%202%20-%202018%20February%20release%20(W1807)/IPMR%20-%20Release%20maintenance%202%207%204%20features%20V2.pptx">here</a>.</h1>
+  		
+  		 <h:link value="Do not show this popup again"  style="vertical-align: bottom; color:blue; text-decoration: underline;" onclick="#{rich:component('infoPopup')}.hide(); setCookie('true'); return false;"></h:link>
+  		
+  		
+  	</h:panelGrid>
+    </p:dialog> -->
+    
+   <h1>Welcome to IPMR</h1>
+      <br />
+      <ui:include src="/info.xhtml" />
+    </ui:define>
+  </ui:composition>
+</body>
+</html>

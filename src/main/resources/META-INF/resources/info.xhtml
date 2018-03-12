@@ -1,0 +1,20 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+ xmlns:p="http://primefaces.org/ui">
+  <h:form id="homeStatus">
+    <img src="graphics/Brands_VG2.png" style="width: auto; height: auto" />
+    <br/><br/><br/><br/>
+    
+     <p:panel header="Investigator PMR Status" id="toggleable" toggleable="true" toggleSpeed="500" closeSpeed="500" widgetVar="panel" style="margin-bottom:20px" expanded="#{investigatorSearchPmrBean.dataNav.dataModel.rowCount gt 0}">
+      <ui:include src="homepage/pmr-investigator-status-details.xhtml">
+        <ui:param name="formBean" value="#{investigatorSearchPmrBean}" />       
+      </ui:include>
+    </p:panel>
+       
+
+    <!-- <ui:include src="homepage/support-info.xhtml" /> -->
+  </h:form>
+</ui:composition>
