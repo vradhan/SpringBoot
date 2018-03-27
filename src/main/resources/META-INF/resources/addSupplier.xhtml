@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Add supplier</title>
+
+	<style type="text/css">
+.pre {
+	border: 2px solid #B8C392;
+	background-color: #92a8d1;
+	padding: 20px;
+	margin: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 130%;
+	color: #FAF6F6;
+	overflow: auto;
+	width: 30%;
+	height: auto;
+}
+
+.imageStyle {
+	/* 	border: 2px solid #B8C392;
+	background-color: #5F9EA0;
+	padding: 20px;
+	margin: 20px; */
+	height: 50px;
+	width: 100px;
+}
+
+.prompt {
+	font-size: medium;
+	color: white;
+}
+</style>
+</h:head>
+<h:body>
+	<h:form>
+		<!-- <p:growl id="growl" sticky="true" showDetail="true" /> -->
+		<!-- <p:wizard>
+			 <p:tab id="SupplierDetails" name="Add Supplier">  -->
+				<p:panel title ="Supplier Details" >
+					<p:messages />
+					<p:panelGrid columns="2" columnClasses="label, value" styleClass ="pre">
+						<f:facet name="header"> 
+							<p:graphicImage alt="home" url="/graphics/HomeIcon.jpg"
+								styleClass="imageStyle" />
+								<h:outputText value=" Home"/>
+						 </f:facet> 
+						<h:outputText value="Parma ID: *" />
+						<p:inputText id="parmaID" value="#{userWizard.user.parmaID}"
+							required="true" label="Firstname" />
+
+						<h:outputText value="Trading Partner *" />
+						<p:inputText id="tradingPartner"
+							value="#{userWizard.user.tradingPartner}" required="true"
+							label="Lastname" />
+
+						<h:outputText value="Vat exception: " />
+						<p:inputText id="vatException"
+							value="#{userWizard.user.vatException}" />
+
+						<h:outputText value="Tax exception: " />
+						<p:inputText id="taxException"
+							value="#{userWizard.user.taxException}" />
+
+						<h:outputText value="Company Type: " />
+						<p:inputText id="companyType"
+							value="#{userWizard.user.companyType}" />
+
+						<h:outputText value="Diversity Code: " />
+						<p:inputText id="diversityCode"
+							value="#{userWizard.user.diversityCode}" />
+		
+						<p:commandButton id="submit" value="Submit"
+							actionListener="#{userWizard.save}" ajax="false"/>
+							<p:commandButton id ="next" value="Next"/>
+
+					</p:panelGrid>
+				</p:panel>
+			 <!-- </p:tab>
+		</p:wizard> -->
+	</h:form>
+</h:body>
+</html>
